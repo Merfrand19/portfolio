@@ -1,0 +1,214 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    background: #13151a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.3s ease;
+    padding: var(--spacing-xl);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-secondary);
+    font-size: 2rem;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.popup-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.popup-header h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.popup-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.popup-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+}
+
+.popup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.popup-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.code-window {
+    background: #000;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: #a5b3ce;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.window-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    margin-bottom: var(--spacing-md);
+}
+
+.info-section h3 {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.info-section p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.results-box {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.result-stat {
+    font-size: 1.5rem;
+    color: #4ade80;
+    /* Green */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.result-list {
+    list-style: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.result-list li {
+    margin-bottom: 4px;
+}
+
+.popup-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .popup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-content {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 600px) {
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.5rem;
+    }
+
+    .popup-header h2 {
+        font-size: 1.5rem;
+        padding-right: 40px;
+    }
+
+    .popup-tags {
+        flex-wrap: wrap;
+    }
+
+    .popup-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}

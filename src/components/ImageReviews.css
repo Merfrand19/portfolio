@@ -1,0 +1,49 @@
+.image-reviews-section {
+    padding: var(--spacing-xl);
+    background-color: var(--bg-color);
+}
+
+.image-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.image-review-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    /* Ensure image fits well */
+}
+
+.image-review-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.review-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Since they are text screenshots, contain is safer to read, or cover if they are consistent */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image-reviews-section {
+        padding: var(--spacing-md);
+    }
+
+    .image-reviews-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .image-review-card {
+        border-radius: var(--radius-sm);
+    }
+}
