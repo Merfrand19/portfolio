@@ -1,5 +1,5 @@
 .contact-page {
-    padding: 120px var(--spacing-xl) var(--spacing-xl);
+    padding: 5%;
     /* Add top padding for fixed header */
     min-height: 80vh;
     display: flex;

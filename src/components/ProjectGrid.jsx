@@ -14,8 +14,8 @@ const projects = [
     },
     {
         id: 2,
-        title: "BikeSeller – Application Shopify de personnalisation",
-        description: "BikeSeller est une application Shopify sur-mesure conçue pour offrir aux clients une expérience de personnalisation visuelle complète pour la décoration de leur moto. À travers une interface fluide et intuitive, les utilisateurs peuvent configurer chaque detail esthétique : couleurs, motifs, matière, finitions, etc, tout en ajoutant des accessoires optionnels (housse de selle, mousse de guidon...) pour enrichir leur personnalisation — et augmenter la valeur du panier grâce à une stratégie d'upsell intégrée. Fonctionnalités : Personnalisation en temps réel, aperçu dynamique synchronisé, intégration native Shopify.",
+        title: "BikeSellier – Application Shopify de personnalisation",
+        description: "BikeSellier est une application Shopify sur-mesure conçue pour offrir aux clients une expérience de personnalisation visuelle complète pour la décoration de leur moto. À travers une interface fluide et intuitive, les utilisateurs peuvent configurer chaque detail esthétique : couleurs, motifs, matière, finitions, etc, tout en ajoutant des accessoires optionnels (housse de selle, mousse de guidon...) pour enrichir leur personnalisation — et augmenter la valeur du panier grâce à une stratégie d'upsell intégrée. Fonctionnalités : Personnalisation en temps réel, aperçu dynamique synchronisé, intégration native Shopify.",
         tags: ["Shopify", "React", "Application", "GraphQL"],
         videoUrl: "https://www.youtube.com/embed/dt2OyvG3v50",
         imageUrl: "https://img.youtube.com/vi/dt2OyvG3v50/maxresdefault.jpg",
@@ -49,23 +49,31 @@ const projects = [
         id: 6,
         title: "Formulaire de simulation – Éligibilité aux aides",
         description: "Codage d'un formulaire interactif type Typeform, destiné à simuler l'éligibilité à des aides, avec une expérience fluide et orientée conversion. Les données collectées sont automatiquement envoyées vers un Google Sheet, facilitant la gestion des leads. Ce formulaire est 100 % réutilisable et peut être intégré sur toutes les plateformes web (System.io, Wordpress, Framer, etc).",
-        tags: ["Typeform Clone", "JavaScript", "Automatisation", "Google Sheets API"],
+        tags: ["HTML", "CSS", "JavaScript", "Automatisation", "Google Sheets API"],
         imageUrl: "https://thumbor.comeup.com/FzhBadmWOgf-jBeyFrWlm5aqiVk=/filters:no_upscale()/uploads/media/picture/5f33e8a6-9ced-47c7-b87d-00b2e72389c5/tmp/projects/5f33e8a6-9ced-47c7-b87d-00b2e72389c5/form-nicolas-68626712beb47.png",
         link: "https://nicolas-form-8e1ybq2qx-merfrand19s-projects.vercel.app/"
     },
     {
         id: 7,
+        title: "Ajout de produits via API",
+        description: "Intégration massive de près de 5 000 références produits sur la plateforme e-commerce Woomban à partir du catalogue fournisseur BDroppy. Le projet a nécessité l'exploitation de l'API REST du fournisseur via Postman pour la phase de test et de structuration des données, suivie du développement d'un script Python sur-mesure pour automatiser l'importation et la mise à jour des produits vers PrestaShop.",
+        tags: ["PrestaShop", "Python", "API REST", "Postman", "Automatisation"],
+        imageUrl: "/bdroppy.png",
+        link: "#"
+    },
+    {
+        id: 8,
         title: "Snake Game – Développement C#",
         description: "Développement d'une version classique du jeu Snake réalisée en C#. Le projet met l'accent sur la logique de programmation, la gestion des collisions et la manipulation des structures de données pour le mouvement fluide du serpent. Ce projet illustre la maîtrise des concepts fondamentaux de la programmation orientée objet.",
         tags: ["C#", "Algorithmique", "Jeu Vidéo"],
         imageUrl: "/snake.jpeg",
         link: "https://github.com/Merfrand19/Snake"
-    }
+    },
 ];
 
 const ProjectGrid = ({ onProjectClick }) => {
     const [activeFilter, setActiveFilter] = useState('All');
-    const filters = ["All", "Shopify", "PrestaShop", "WordPress", "React", "JavaScript"];
+    const filters = ["All", "Shopify", "PrestaShop", "WordPress", "React", "JavaScript", "HTML", "CSS", "C#"];
 
     const filteredProjects = activeFilter === 'All'
         ? projects
@@ -74,9 +82,9 @@ const ProjectGrid = ({ onProjectClick }) => {
     return (
         <section className="project-grid-section" id="library">
             <div className="grid-header">
-                <div>
-                    <h2 className="section-title">Mes réalisations.</h2>
-                    <p className="section-subtitle">Quelques projets sur lesquels j'ai travaillé.</p>
+                <div className="grid-header-title">
+                    <h2 className="section-title">Mes réalisations</h2>
+                    <p className="section-subtitle">Quelques projets sur lesquels j'ai travaillé</p>
                 </div>
 
                 <div className="filters">

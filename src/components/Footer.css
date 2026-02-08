@@ -83,6 +83,7 @@
     .footer-content {
         flex-direction: column;
         gap: var(--spacing-xl);
+        align-items: center;
     }
 
     .footer-links {

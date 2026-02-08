@@ -7,7 +7,7 @@ const Contact = () => {
             <div className="contact-container">
                 <h1 className="contact-title">Contactez-moi</h1>
                 <p className="contact-subtitle">
-                    Un projet ? Une question ? N'hésitez pas à me contacter.
+                    Je suis joignable aux contacts ci-dessous
                 </p>
 
                 <div className="contact-card">
