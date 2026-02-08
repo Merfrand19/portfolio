@@ -10,8 +10,8 @@ const reviews = [
 const Reviews = () => {
     return (
         <section className="reviews-section">
-            <h2 className="section-title">Avis Clients.</h2>
-            <p className="section-subtitle">Retours d'expérience de mes collaborations.</p>
+            <h2 className="section-title">Avis Clients</h2>
+            <p className="section-subtitle">Retours d'expérience de mes collaborations</p>
 
             <div className="reviews-grid">
                 {reviews.map(review => (
