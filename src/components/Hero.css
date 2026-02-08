@@ -12,6 +12,10 @@
     flex: 1;
     max-width: 600px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-title {
@@ -177,7 +181,7 @@
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.5 rem;
     }
 
     .hero-actions {
