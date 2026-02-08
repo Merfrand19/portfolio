@@ -74,7 +74,7 @@ const projects = [
         title: "Courtiz – Formulaire de simulation de crédit",
         description: "Développement d'un tunnel de conversion dynamique par étapes pour le courtage en crédit. Le formulaire utilise une logique conditionnelle pour adapter les questions en temps réel selon le profil de l'utilisateur (rachat de crédit, prêt immobilier, etc.). L'interface intègre des composants interactifs fluides pour optimiser l'expérience utilisateur et maximiser le taux de complétion.",
         tags: ["HTML", "CSS", "JS", "Swiper"],
-        imageUrl: "/courtiz-preview.jpeg",
+        imageUrl: "/courtiz.png",
         link: "https://courtiz-form.vercel.app/"
     }
 ];
