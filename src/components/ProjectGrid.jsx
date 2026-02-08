@@ -51,7 +51,7 @@ const projects = [
         description: "Codage d'un formulaire interactif type Typeform, destiné à simuler l'éligibilité à des aides, avec une expérience fluide et orientée conversion. Les données collectées sont automatiquement envoyées vers un Google Sheet, facilitant la gestion des leads. Ce formulaire est 100 % réutilisable et peut être intégré sur toutes les plateformes web (System.io, Wordpress, Framer, etc).",
         tags: ["HTML", "CSS", "JavaScript", "Automatisation", "Google Sheets API"],
         imageUrl: "https://thumbor.comeup.com/FzhBadmWOgf-jBeyFrWlm5aqiVk=/filters:no_upscale()/uploads/media/picture/5f33e8a6-9ced-47c7-b87d-00b2e72389c5/tmp/projects/5f33e8a6-9ced-47c7-b87d-00b2e72389c5/form-nicolas-68626712beb47.png",
-        link: "https://nicolas-form-8e1ybq2qx-merfrand19s-projects.vercel.app/"
+        link: "https://nicolas-form.vercel.app/"
     },
     {
         id: 7,
@@ -69,6 +69,14 @@ const projects = [
         imageUrl: "/snake.jpeg",
         link: "https://github.com/Merfrand19/Snake"
     },
+    {
+        id: 9,
+        title: "Courtiz – Formulaire de simulation de crédit",
+        description: "Développement d'un tunnel de conversion dynamique par étapes pour le courtage en crédit. Le formulaire utilise une logique conditionnelle pour adapter les questions en temps réel selon le profil de l'utilisateur (rachat de crédit, prêt immobilier, etc.). L'interface intègre des composants interactifs fluides pour optimiser l'expérience utilisateur et maximiser le taux de complétion.",
+        tags: ["HTML", "CSS", "JS", "Swiper"],
+        imageUrl: "/courtiz-preview.jpeg",
+        link: "https://courtiz-form.vercel.app/"
+    }
 ];
 
 const ProjectGrid = ({ onProjectClick }) => {
