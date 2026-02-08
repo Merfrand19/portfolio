@@ -14,12 +14,12 @@ const Hero = () => {
 
                 <p className="hero-description">
                     Freelance pendant 2 ans, j'ai accompagné des e-commercants sur les tâches techniques de leur site web.
-                    Je suis actuellement en 3e année à <span className="highlight">Polytech Nantes</span> et je suis à la recherche d'un stage ou CDI de 2 mois à partir du 15 Juin.
+                    Je suis actuellement en 3e année à <span className="highlight">Polytech Nantes</span> et je suis à la recherche d'un stage ou CDD de 2 mois à partir du 15 Juin.
                 </p>
 
                 <div className="hero-actions">
                     <a href="#library" className="btn btn-primary">Découvrir mes réalisations</a>
-                    <a href="https://urlr.me/zrwY8p" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Mon CV</a>
+                    <a href="https://tinyurl.com/cv-deoGratias" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Mon CV</a>
                 </div>
 
                 <div className="status-bar">

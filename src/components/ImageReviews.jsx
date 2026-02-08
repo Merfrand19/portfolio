@@ -15,6 +15,8 @@ const reviews = [
 ];
 
 const ImageReviews = () => {
+    const [selectedImage, setSelectedImage] = React.useState(null);
+
     return (
         <section className="image-reviews-section">
             <h2 className="section-title">Témoignages</h2>
@@ -22,11 +24,24 @@ const ImageReviews = () => {
 
             <div className="image-reviews-grid">
                 {reviews.map(review => (
-                    <div key={review.id} className="image-review-card">
+                    <div
+                        key={review.id}
+                        className="image-review-card"
+                        onClick={() => setSelectedImage(review)}
+                    >
                         <img src={review.image} alt={review.alt} className="review-image" />
                     </div>
                 ))}
             </div>
+
+            {selectedImage && (
+                <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
+                    <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+                        <button className="lightbox-close" onClick={() => setSelectedImage(null)}>×</button>
+                        <img src={selectedImage.image} alt={selectedImage.alt} className="lightbox-image" />
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

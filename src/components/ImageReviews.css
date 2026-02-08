@@ -5,7 +5,7 @@
 
 .image-reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
 }
@@ -17,20 +17,74 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease;
     display: flex;
-    /* Ensure image fits well */
+    cursor: pointer;
 }
 
 .image-review-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .review-image {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto;
     height: auto;
     object-fit: contain;
-    /* Since they are text screenshots, contain is safer to read, or cover if they are consistent */
     display: block;
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
