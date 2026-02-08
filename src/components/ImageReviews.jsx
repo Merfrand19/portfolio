@@ -17,8 +17,8 @@ const reviews = [
 const ImageReviews = () => {
     return (
         <section className="image-reviews-section">
-            <h2 className="section-title">Témoignages.</h2>
-            <p className="section-subtitle">Ils m'ont fait confiance.</p>
+            <h2 className="section-title">Témoignages</h2>
+            <p className="section-subtitle">Ils m'ont fait confiance</p>
 
             <div className="image-reviews-grid">
                 {reviews.map(review => (
